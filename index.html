@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Talavyria - Frontend Developer</title>
+    <meta name="description" content="Portfolio of Ivan Talavyria, Frontend Developer">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="wave-canvas"></canvas>
+
+    <header id="header">
+        <div class="header-container">
+            <a href="#hero" class="logo" style="color:white; text-decoration:none;">Ivan Talavyria</a>
+            
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link" data-i18n="nav-about">Про мене</a>
+                <a href="#skills" class="nav-link" data-i18n="nav-skills">Навички</a>
+                <a href="#experience" class="nav-link" data-i18n="nav-experience">Досвід</a>
+                <a href="#education" class="nav-link" data-i18n="nav-education">Освіта</a>
+                
+                <!-- Socials in mobile menu -->
+                <div class="social-icons mobile-socials">
+                    <button class="social-icon contact-btn" style="position: relative;" aria-label="Phone">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span class="contact-popup">+380502272386</span>
+                    </button>
+                    <button class="social-icon contact-btn" style="position: relative;" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span class="contact-popup">vanwa1997@gmail.com</span>
+                    </button>
+                    <a href="https://t.me/vanwa" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ivan-talavyria" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/JonHunter777" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="social-icons desktop-socials">
+                    <button class="social-icon contact-btn" style="position: relative;" aria-label="Phone">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span class="contact-popup">+380502272386</span>
+                    </button>
+                    <button class="social-icon contact-btn" style="position: relative;" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span class="contact-popup">vanwa1997@gmail.com</span>
+                    </button>
+                    <a href="https://t.me/ivandarber" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ivan-talavyrya-027574347/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/JonHunter777" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+                
+                <div class="lang-switcher">
+                  <button class="lang-btn active" data-lang="ua">UA</button>
+                  <span class="lang-divider">|</span>
+                  <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                
+                <button class="burger-menu" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-bg">
+                <img src="img/intro.png" alt="Hero Background">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <span class="hero-label" data-i18n="hero-label">Frontend Developer</span>
+                <h1 class="hero-title" data-i18n="hero-title">ТАЛАВИРЯ ІВАН</h1>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">Junior який кодить, вчиться і запускає</p>
+                
+            </div>
+            <div class="scroll-down">↓</div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="about" class="section">
+            <div class="container about-container">
+                <div class="about-video-wrapper animate-on-scroll">
+                    <video src="img/about.mp4" autoplay loop muted playsinline class="about-video"></video>
+                    <div class="video-fade"></div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <h2 class="section-title" data-i18n="about-title">Про мене</h2>
+                    <p data-i18n="about-text">Шукаю позицію, де можу застосувати технічні навички верстки та вміння працювати з контентом. Маю досвід самостійної роботи над веб-проєктами, регулярно використовую AI-інструменти. Швидко навчаюся новому, вмію самостійно знаходити рішення нестандартних задач.</p>
+                    
+                    <div class="soft-skills">
+                        <div class="soft-skill-card" data-i18n="soft-1">Аналітичне мислення</div>
+                        <div class="soft-skill-card" data-i18n="soft-2">Швидке навчання</div>
+                        <div class="soft-skill-card" data-i18n="soft-3">Легкість у спілкуванні</div>
+                        <div class="soft-skill-card" data-i18n="soft-4">Готовність до викликів</div>
+                        <div class="soft-skill-card" data-i18n="soft-5">Орієнтація на результат</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills-title">Навички</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card animate-on-scroll"><i class="devicon-html5-plain"></i> HTML5</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-css3-plain"></i> CSS3</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-javascript-plain"></i> JavaScript</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-git-plain"></i> Git</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-wordpress-plain"></i> WordPress</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-figma-plain"></i> Figma</div>
+                    <div class="skill-card animate-on-scroll"><i class="devicon-canva-original"></i> Canva</div>
+                    <div class="skill-card animate-on-scroll">🤖 AI Tools</div>
+                    <div class="skill-card animate-on-scroll">📊 CRM</div>
+                </div>
+
+                <div class="languages">
+                    <h3 data-i18n="lang-title">Мови / Languages</h3>
+                    <div class="lang-bar-container animate-on-scroll">
+                        <div class="lang-info">
+                            <span data-i18n="lang-ua">Українська</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-progress" data-width="100%"></div></div>
+                    </div>
+                    <div class="lang-bar-container animate-on-scroll">
+                        <div class="lang-info">
+                            <span data-i18n="lang-ru">Російська</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-progress" data-width="100%"></div></div>
+                    </div>
+                    <div class="lang-bar-container animate-on-scroll">
+                        <div class="lang-info">
+                            <span data-i18n="lang-en">Англійська</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-progress" data-width="30%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience-title">Досвід</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 data-i18n="exp-1-company">МІСТО.UA | Frontend-розробник (волонтер)</h3>
+                            <span class="timeline-date">2025–2026</span>
+                            <ul class="timeline-list">
+                                <li data-i18n="exp-1-desc-1">Верстав інтерфейси за макетами: адаптивна верстка, валідація форм</li>
+                                <li data-i18n="exp-1-desc-2">Писав JS-логіку (Vanilla JS) для інтерактивних компонентів порталу</li>
+                                <li data-i18n="exp-1-desc-3">Працював у команді через Telegram, здавав задачі в реліз</li>
+                                <li data-i18n="exp-1-desc-4">Медичний портал — реальний продукт з живим трафіком (SEO-орієнтований)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3 data-i18n="exp-2-company">Агро компанія "Агро-Країна" | Ведучий менеджер з продажу</h3>
+                            <span class="timeline-date">2022–2026</span>
+                            <ul class="timeline-list">
+                                <li data-i18n="exp-2-desc-1">Активний продаж сільськогосподарської продукції та обладнання</li>
+                                <li data-i18n="exp-2-desc-2">Робота з клієнтами: консультації, індивідуальний підбір обладнання</li>
+                                <li data-i18n="exp-2-desc-3">Виконання плану продажу та постановка цілей перед командою</li>
+                                <li data-i18n="exp-2-desc-4">CRM-система для аналізу даних та управління клієнтською базою</li>
+                                <li data-i18n="exp-2-desc-5">Навчання співробітників, підвищення їх кваліфікації</li>
+                                <li data-i18n="exp-2-desc-6">Розвиток рекламних кампаній для просування бренду</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="education-title">Освіта</h2>
+                <div class="edu-grid">
+                    <div class="edu-card glass-card animate-on-scroll">
+                        <h3 data-i18n="edu-1-name">Український державний університет науки та технологій (УДУНТ)</h3>
+                        <p data-i18n="edu-1-desc">Матеріалознавство, магістр | 2019–2024</p>
+                    </div>
+                    <div class="edu-card glass-card animate-on-scroll">
+                        <h3 data-i18n="edu-2-name">Дніпровський індустріально-педагогічний фаховий коледж</h3>
+                        <p data-i18n="edu-2-desc">Технік-механік | 2013–2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section">
+        <div class="container">
+            <div class="footer-divider glass-card"></div>
+            <div class="footer-socials">
+                <a href="tel:+380502272386" class="social-icon" title="+380502272386">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
+                <a href="mailto:vanwa1997@gmail.com" class="social-icon" title="vanwa1997@gmail.com">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+                <a href="https://t.me/vanwa" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </a>
+                <a href="https://linkedin.com/in/ivan-talavyria" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/JonHunter777" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+            </div>
+            <p class="footer-text" data-i18n="footer-text">© 2026 Ivan Talavyria. Built with HTML, CSS & Vanilla JS.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
