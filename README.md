@@ -1,17 +1,34 @@
-# Portfolio - Ivan Talavyria
+# Ivan Talavyria — Portfolio
 
-A single-page portfolio website for a Frontend Developer built with HTML5, CSS3, and Vanilla JavaScript.
+Personal portfolio website built from scratch.
+
+## Live Demo
+[jonhunter777.github.io/portfolio](https://jonhunter777.github.io/portfolio/)
+
+## Stack
+- HTML5
+- CSS3 (Glassmorphism, Canvas Animation, Flexbox, Grid)
+- Vanilla JavaScript
+- GitHub Pages
 
 ## Features
-- Responsive design (Mobile First)
-- Custom wave animation background using Canvas API
-- Intersection Observer for scroll animations
-- Multi-language support (Ukrainian & English)
-- Glassmorphism design elements
+- Animated wave background (Canvas API)
+- Ken Burns effect on Hero image
+- UA / EN language switcher
+- Dark / Light theme toggle
+- Responsive design (mobile, tablet, desktop)
+- Glassmorphism cards
+- Smooth scroll animations
 
-## Technologies
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Devicons
-- Google Fonts (Inter, Playfair Display)
+## Sections
+- Hero
+- About
+- Skills
+- Experience
+- Education
+
+## Contact
+- Email: vanwa1997@gmail.com
+- Telegram: t.me/vanwa
+- LinkedIn: linkedin.com/in/ivan-talavyria
+- GitHub: github.com/JonHunter777
