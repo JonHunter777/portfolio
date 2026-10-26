@@ -7,7 +7,7 @@ const I18N = {
     "nav.contact": "Контакти",
 
     "hero.kicker": "Резюме · 2026",
-    "hero.name": "Талавиря Іван",
+    "hero.name": "Іван Талавиря",
     "hero.role": "Frontend Developer",
     "hero.tagline": "Junior, який кодить, вчиться і запускає.",
     "hero.cta.contact": "Зв'язатися",
